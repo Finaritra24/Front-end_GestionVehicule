@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Accordion, AccordionTab } from 'primereact/accordion';
-import AjoutVehicule from './AjoutVehicule';
-import ListVehicule from './ListVehicule';
         
 export default function Vehicule() {
   const [userId, setUserId] = useState(null);
   //if user
   useEffect(() => {
-    fetch('http://localhost:8081/getAdminId', { credentials: 'include' })
+    fetch('http://localhost:8081/getUserId', { credentials: 'include' })
       .then(response => response.text())
       .then(data => setUserId(data))
       .catch(error => console.error(error));
@@ -29,7 +27,6 @@ export default function Vehicule() {
                         </div>
                     }
                 >
-                <AjoutVehicule/>
               </AccordionTab>
                 <AccordionTab
                     header={
@@ -39,7 +36,6 @@ export default function Vehicule() {
                         </div>
                     }
                 >
-                    <ListVehicule/>
                 </AccordionTab>
                 <AccordionTab
                     header={

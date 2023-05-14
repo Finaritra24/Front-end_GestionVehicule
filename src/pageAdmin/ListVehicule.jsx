@@ -4,7 +4,6 @@ import { Column } from 'primereact/column';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import * as XLSX from 'xlsx';
-import { sheet_set_range_style } from 'xlsx';
 
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.17.0/dist/xlsx.full.min.js"></script>
         
