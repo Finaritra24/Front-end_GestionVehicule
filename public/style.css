@@ -1,0 +1,18 @@
+html,
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+}
+html body:before {
+  background: linear-gradient(25deg, #281c6b,#19758a, #262e7c, #464781);
+  bottom: 0;
+  content: '';
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+}
