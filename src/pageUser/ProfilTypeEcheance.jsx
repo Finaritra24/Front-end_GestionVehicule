@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Accordion, AccordionTab } from 'primereact/accordion';
-import ListTrajet from './ListTrajet';
+import ListEcheanceVehicule from './ListEcheanceVehicule';
 import NavUser from '../nav/NavUser';
-import AjoutTrajet from './AjoutTrajet';
         
-export default function Vehicule() {
+export default function ProfilTypeEcheance() {
   const [userId, setUserId] = useState(null);
   //if user
   useEffect(() => {
@@ -21,28 +20,27 @@ export default function Vehicule() {
   return (
     <div>
         <NavUser/>
-        <h1>Trajet</h1>
+        <h1>Profil Assurance</h1>
         <div className="card">
             <Accordion activeIndex={0}>
-              <AccordionTab
-                    header={
-                        <div className="flex align-items-center">
-                            <i className="pi pi-plus mr-2"></i>
-                            <span className="vertical-align-middle">Ajouter Trajet</span>
-                        </div>
-                    }
-                >
-                    <AjoutTrajet/>
-              </AccordionTab>
                 <AccordionTab
                     header={
                         <div className="flex align-items-center">
                             <i className="pi pi-list mr-2"></i>
-                            <span className="vertical-align-middle">Liste Trajet</span>
+                            <span className="vertical-align-middle">A propos</span>
                         </div>
                     }
                 >
-                    <ListTrajet/>
+                </AccordionTab>
+                <AccordionTab
+                    header={
+                        <div className="flex align-items-center">
+                            <i className="pi pi-list mr-2"></i>
+                            <span className="vertical-align-middle">Liste Vehicule</span>
+                        </div>
+                    }
+                >
+                  <ListEcheanceVehicule/>
                 </AccordionTab>
                 <AccordionTab
                     header={

@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Accordion, AccordionTab } from 'primereact/accordion';
-import ListTrajet from './ListTrajet';
+import AjoutAssurance from './AjoutAssurance';
 import NavUser from '../nav/NavUser';
-import AjoutTrajet from './AjoutTrajet';
-        
+import ListAssurance from './ListAssurance';
 export default function Vehicule() {
   const [userId, setUserId] = useState(null);
   //if user
   useEffect(() => {
-    fetch('http://localhost:8081/getUserId', { credentials: 'include' })
+    fetch('http://localhost:8081/getVehiculeId', { credentials: 'include' })
       .then(response => response.text())
       .then(data => setUserId(data))
       .catch(error => console.error(error));
@@ -20,29 +19,29 @@ export default function Vehicule() {
 
   return (
     <div>
-        <NavUser/>
-        <h1>Trajet</h1>
+      <NavUser/>
+      <h1>Profil Vehicule</h1>
         <div className="card">
             <Accordion activeIndex={0}>
               <AccordionTab
                     header={
                         <div className="flex align-items-center">
                             <i className="pi pi-plus mr-2"></i>
-                            <span className="vertical-align-middle">Ajouter Trajet</span>
+                            <span className="vertical-align-middle">Ajouter Assurance</span>
                         </div>
                     }
                 >
-                    <AjoutTrajet/>
+                <AjoutAssurance/>
               </AccordionTab>
                 <AccordionTab
                     header={
                         <div className="flex align-items-center">
                             <i className="pi pi-list mr-2"></i>
-                            <span className="vertical-align-middle">Liste Trajet</span>
+                            <span className="vertical-align-middle">Liste Assurance</span>
                         </div>
                     }
                 >
-                    <ListTrajet/>
+                    <ListAssurance/>
                 </AccordionTab>
                 <AccordionTab
                     header={
