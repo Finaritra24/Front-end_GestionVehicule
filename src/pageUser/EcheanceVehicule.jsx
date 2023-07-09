@@ -14,7 +14,7 @@ export default function EcheanceVehicule() {
     }
     //list echeance
     useEffect(() => {
-        fetch('http://localhost:8081/listTypeEcheance')
+        fetch('http://localhost:8081/listg-TypeEcheance')
         .then(response => response.json())
         .then(data => setEcheances(data))
         .catch(error => console.error(error));

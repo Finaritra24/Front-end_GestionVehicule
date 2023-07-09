@@ -22,10 +22,10 @@ export default function AjoutAssurance() {
     function handleSubmit(event) {
         event.preventDefault(); // empêche la soumission du formulaire
       
-        fetch('http://localhost:8081/ajoutAssurance', {
+        fetch('http://localhost:8081/ajout-EcheanceVehicule', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ dateecheance,selectedType }),
+          body: JSON.stringify({ dateecheance,idtypeecheance:selectedType }),
           credentials: 'include'
         })
         .then(response => {

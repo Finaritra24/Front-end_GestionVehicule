@@ -13,7 +13,7 @@ export default function ListVehicule() {
   //fin-listes
   //list vehicule
   useEffect(() => {
-    fetch('http://localhost:8081/listVehicule')
+    fetch('http://localhost:8081/listg-Vehicule')
       .then(response => response.json())
       .then(data => setVehicules(data))
       .catch(error => console.error(error));

@@ -3,22 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/standalone": "^7.22.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+    "babel-preset-react-app": "^10.0.1",
     "exceljs": "^4.3.0",
     "file-saver": "^2.0.5",
     "js-cookie": "^3.0.5",
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.5.28",
     "moment": "^2.29.4",
+    "path-browserify": "^1.0.1",
     "primeflex": "^3.3.0",
     "primeicons": "^6.0.1",
     "primereact": "^9.3.0",
     "react": "^18.2.0",
     "react-data-export": "^0.6.0",
     "react-dom": "^18.2.0",
+    "react-dynamic-import": "^1.1.5",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
     "sass": "^1.59.3",
@@ -49,5 +53,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2"
   }
 }

@@ -24,10 +24,10 @@ export default function AjoutVehicule() {
     function handleSubmit(event) {
         event.preventDefault(); // empêche la soumission du formulaire
       
-        fetch('http://localhost:8081/ajoutVehicule', {
+        fetch('http://localhost:8081/ajout-Vehicule', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ numero, selectedMarque,selectedModele,selectedType }),
+          body: JSON.stringify({ numero, idmarque: selectedMarque,idmodele: selectedModele,idtype: selectedType }),
           credentials: 'include'
         })
         .then(response => {

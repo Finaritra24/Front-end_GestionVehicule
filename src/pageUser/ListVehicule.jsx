@@ -77,9 +77,10 @@ export default function ListVehicule() {
     XLSX.utils.book_append_sheet(workbook, worksheet, "Liste des véhicules");
     XLSX.writeFile(workbook, "liste_vehicules.xlsx");
   };
+  
   //link to profil vehicule
   const handleOnClick = (id) => {
-        fetch('http://localhost:8081/profilVehicule', {
+        fetch('http://localhost:8081/setCookie-EcheanceVehicule', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ id }),
@@ -114,8 +115,6 @@ export default function ListVehicule() {
                             <Column field="idMarque" header="idMarque" sortable   style={{ width: '25%' }}></Column>
                             <Column field="idModele" header="idModele" sortable   style={{ width: '25%' }}></Column>
                             <Column sortable field="Disponibilité" header="Disponibilité" body={(rowData) => <CheckAvailability idv={rowData.idVehicule} />} style={{ width: '25%' }}></Column>
-
-
                         </DataTable>
                         <button onClick={generatePdf}>Générer PDF</button>
                         <button onClick={generateExcel}>Générer excel</button>

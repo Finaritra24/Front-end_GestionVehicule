@@ -16,7 +16,7 @@ export default function ListAssurance() {
   const navigate = useNavigate();
   //list assurance
   useEffect(() => {
-    fetch('http://localhost:8081/listAssurance', { credentials: 'include' })
+    fetch('http://localhost:8081/listg-EcheanceVehicule', { credentials: 'include' })
       .then(response => response.json())
       .then(data => {
         // Ajouter la colonne "jour" à chaque élément

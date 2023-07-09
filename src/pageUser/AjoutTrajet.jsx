@@ -52,10 +52,10 @@ export default function AjoutTrajet() {
             showErrorVitesse()
           }
           else {
-            fetch('http://localhost:8081/ajoutTrajet', {
+            fetch('http://localhost:8081/ajout-Trajet', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ dhdeb, selectedLieuDeb,kmdeb,dhfin,selectedLieuFin,kmfin ,qteCarb,montantCar,selectedVehicule,selectedChauffeur,vitesse,motif}),
+              body: JSON.stringify({ dhdeb:dhdeb, lieudeb:selectedLieuDeb,kmdeb:kmdeb,dhfin:dhfin,lieufin:selectedLieuFin,kmfin:kmfin ,qtecarb:qteCarb,montantcar:montantCar,idvehicule:selectedVehicule,idchauffeur:selectedChauffeur,vitesse,motif}),
               credentials: 'include'
             })
             .then(response => {

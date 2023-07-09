@@ -9,12 +9,16 @@ import ProfilVehicule from './pageUser/ProfilVehicule';
 import ModifEcheance from './pageUser/ModifEcheance';
 import EcheanceVehicule from './pageUser/EcheanceVehicule';
 import ProfilTypeEcheance from './pageUser/ProfilTypeEcheance';
+import MyMarque from './test/MyMarque';
+import MyTest from './test/MyTest';
 function App() {
   const pi="monlien";
   return (
     <div className="App">
       <Router>
           <Routes>
+              <Route exact path="/mytest" element={<MyTest/>} />
+              <Route exact path="/mymarque" element={<MyMarque/>} />
             {/* admin */}
               <Route exact path="/admin" element={<LoginAdmin/>} />
               <Route exact path="/listVehicule" element={<Vehicule/>} component={pi} />
